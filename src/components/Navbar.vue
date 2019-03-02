@@ -4,7 +4,8 @@
     <nav class="animated fadeInDown level">
       <div class="level-left has-text-centered">
         <img class="logo" src="@/assets/logo.png">
-        <b class="version">{{ version }}</b>
+        <img class="banner" src="@/assets/banner.png">
+        <p class="version">{{ version }}</p>
       </div>
       <div class="level-right has-text-centered">
         <img class="photo" :src="userImage">
@@ -27,31 +28,6 @@
           :class="{'menu-item-left': true, 'button': true, 'is-small': true, 'is-outlined': route !== 'admin', 'is-dark': true}"
           @click="goTo('admin')"
         >Admin</button>
-      </div>
-      <div class="level-right">
-        <button
-          @click="launchUrl('https://weconnect.github.io/dot-deployer-client/')"
-          v-if="help"
-          onclick="this.blur();"
-          class="animated fadeInRight button help menu-item-right is-small is-outlined is-dark"
-        >Documentation</button>
-        <button
-          @click="launchUrl('https://airtable.com/shrSXlzhsxpelFmc1')"
-          v-if="help"
-          onclick="this.blur();"
-          class="animated fadeInRight button help menu-item-right is-small is-outlined is-dark"
-        >Feedback</button>
-        <button
-          @click="launchUrl('slack://channel?team=T03KB9Y6Y&id=CB5FX2PTP')"
-          v-if="help"
-          onclick="this.blur();"
-          class="animated fadeInRight button help menu-item-right is-small is-outlined is-dark"
-        >Support</button>
-        <button
-          @click="help = !help"
-          onclick="this.blur();"
-          class="button help menu-item-right is-small is-outlined is-dark"
-        >Help</button>
       </div>
     </div>
     <!-- MENU BAR -->
@@ -132,7 +108,8 @@ export default {
     height: 35px
     border-radius: 50%
   img.banner
-    height: 35px
+    height: 25px
+    margin-left: 8px
   span.icon
     cursor: pointer
     margin-left: 8px
@@ -146,9 +123,9 @@ export default {
   button.signout
     margin-right: 12px
     margin-left: 12px
-  b.version
+  p.version
     font-size: 20px
-    padding-left: 2px
+    padding-left: 4px
     padding-top: 6px
     color: darken($info, 25)
   button.help 

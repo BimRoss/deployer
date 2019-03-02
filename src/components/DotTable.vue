@@ -167,7 +167,7 @@ export default {
     testIndex(index) {
       let length = this.source.length;
       let valueToTest = length - index;
-      if (valueToTest <= 1) {
+      if (valueToTest <= 0) {
         return true;
       } else {
         return false;
