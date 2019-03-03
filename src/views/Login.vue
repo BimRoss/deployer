@@ -37,11 +37,10 @@ export default {
   mounted() {
     this.enableAutoStart();
     this.getComputerId();
-    this.firebaseAuthListener();
 
-    // process.env.NODE_ENV === "production"
-    //   ? this.checkForUpdates()
-    //   : this.firebaseAuthListener();
+    process.env.NODE_ENV === "production"
+      ? this.checkForUpdates()
+      : this.firebaseAuthListener();
   },
   methods: {
     getComputerId() {

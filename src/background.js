@@ -76,19 +76,16 @@ ipcMain.on('check-for-updates', (event) => {
     autoUpdater.quitAndInstall();
   });
 
-  // const data = {
-  //   provider: 'github',
-  //   owner: 'WeConnect',
-  //   repo: 'dot-deployer-client',
-  //   token: process.env.GH_TOKEN,
-  //   private: true
-  // };
+  const data = {
+    provider: 'github',
+    owner: 'BimRoss',
+    repo: 'releaser-3dmm',
+    token: process.env.GH_TOKEN
+  };
 
-  // autoUpdater.setFeedURL(data)
+  autoUpdater.setFeedURL(data)
   autoUpdater.checkForUpdates();
 })
-
-
 
 // setup authenticator in the main process
 ipcMain.on('authenticate', (event, client) => {
