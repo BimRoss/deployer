@@ -78,7 +78,7 @@ ipcMain.on('check-for-updates', (event) => {
 
   const data = {
     provider: 'github',
-    owner: 'BimRoss',
+    owner: 'grantdfoster',
     repo: 'releaser-3dmm',
     token: process.env.GH_TOKEN
   };
