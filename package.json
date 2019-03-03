@@ -1,6 +1,6 @@
 {
   "name": "releaser-3dmm",
-  "version": "v1.0.3",
+  "version": "v1.0.4",
   "author": "BimRoss",
   "description": "An open-source solution for deploying GitHub releases",
   "scripts": {
